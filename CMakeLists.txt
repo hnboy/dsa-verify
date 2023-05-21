@@ -41,3 +41,7 @@ endif()
 add_library(dsa-verify STATIC src/der.c src/dsa-verify.c src/mp_math.c)
 target_include_directories(dsa-verify PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_include_directories(dsa-verify PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+add_library(test-verify STATIC src/der.c src/dsa-verify.c src/mp_math.c src/verify.c)
+target_include_directories(test-verify PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(test-verify PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
